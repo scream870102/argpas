@@ -1,5 +1,27 @@
 # CHANGELOG
 
+
+## 0.3.0
+### Added
+- `ParseToFloat32(arg, name string) (float32, error){}`
+- `ParseToFloat64(arg, name string) (float64, error){}`
+- `ParseToInterface(pointer interface{}, args []string) error {}`
+    - Allow Type in struct
+        - int
+        - float64
+        - string
+        - bool
+        - argpas.Trigger
+- new type `Trigger`
+    - can use in struct as argument type
+    - Trigger is useful os arg like `--Momoko` `--Help`.
+
+### Updated
+Rename function
+- `ParseArg -> Parse`
+- `ParseArgToInt -> ParseToInt`
+- `ParseArgToStr -> ParseToStr`
+- `ParseArgToBool -> ParseToBool`
 ## 0.2.0
 
 ### Added

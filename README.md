@@ -1,10 +1,17 @@
 # argpas
 
-use this to parse the os arguments
+an utils to parse os arguments 👻
+> argument and name is case insensitive
 
 ```go
-ParseArgToInt(arg, name string) (int, error){}
-ParseArgToStr(arg, name string) (string, error){}
-ParseArgToBool(arg, name string) (bool, error){}
-ParseArg(arg, name string) (string, error){}
+ParseToInterface(pointer interface{},args []string) error{}
+Parse(arg, name string) (string, error){}
+ParseToInt(arg, name string) (int, error){}
+ParseToStr(arg, name string) (string, error){}
+ParseToBool(arg, name string) (bool, error){}
+ParseToFloat32(arg, name string) (float32, error){}
+ParseToFloat64(arg, name string) (float64, error){}
 ```
+
+
+you can find the example in `main/main.go`
