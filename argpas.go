@@ -26,6 +26,14 @@ func Parse(arg, name string) (string, error) {
 	return "", fmt.Errorf("no arg \"%s\" exists", name)
 }
 
+// ParseToTrigger Check if specific arg exist but return as Trigger
+func ParseToTrigger(arg, name string) (*Trigger, error) {
+	if _, err := parse(arg, name); err == nil {
+		return &Trigger{IsTrigger: true}, nil
+	}
+	return nil, fmt.Errorf("no arg \"%s\" exists", name)
+}
+
 // ParseToInt parse the argument and return as Integer
 func ParseToInt(arg, name string) (int, error) {
 	res, err := parse(arg, name)

@@ -15,9 +15,10 @@ type arguments struct {
 }
 
 func main() {
-	interfaceTest()
-	stringTest()
-	argTest()
+	// interfaceTest()
+	// stringTest()
+	// argTest()
+	triggerTest()
 }
 
 func interfaceTest() {
@@ -46,5 +47,14 @@ func argTest(){
 		fmt.Println(err.Error())
 	}else{
 		fmt.Println(result)
+	}
+}
+
+func triggerTest(){
+	arg:= os.Args[1]
+	if result,err:=argpas.ParseToTrigger(arg,"momoko");err!=nil{
+		fmt.Println(err.Error())
+	}else{
+		fmt.Println(result.IsTrigger)
 	}
 }
